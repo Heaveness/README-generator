@@ -5,6 +5,8 @@ const fs = require("fs");
 
 const generateMarkdown = require("./assets/utils/generateMarkdown.js");
 
+const path = require('path');
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -57,14 +59,26 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    const filePath = path.join(__dirname, '..', 'assets', 'utils', fileName);
+
+    fs.writeFile(filePath, data, (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`README.md written successfully: ${filePath}`);
+      }
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((inqReadMe) => {
-        return inqReadMe;
+    .then((inquirerReadMe) => {
+        console.log("Please wait while we generate your README.md file...")
+
+        const markdownContent = generateMarkdown(inquirerReadMe)
+
+        writeToFile('README.md', markdownContent);
     })
 }
 
