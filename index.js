@@ -65,7 +65,7 @@ function writeToFile(fileName, data) {
       if (err) {
         console.error(err);
       } else {
-        console.log(`README.md written successfully: ${filePath}`);
+        console.log(`README.md has been written successfully at ${filePath}`);
       }
     });
 }
