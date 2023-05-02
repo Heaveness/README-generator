@@ -80,6 +80,9 @@ function init() {
 
         writeToFile('README.md', markdownContent);
     })
+    .catch((error) => {
+        console.error(error);
+    })
 }
 
 // Function call to initialize app
