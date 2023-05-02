@@ -59,7 +59,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const filePath = path.join(__dirname, '..', 'assets', 'utils', fileName);
+    const filePath = path.join(__dirname, '..', 'README-generator', 'assets', 'utils', fileName);
 
     fs.writeFile(filePath, data, (err) => {
       if (err) {
@@ -78,7 +78,7 @@ function init() {
 
         const markdownContent = generateMarkdown(inquirerReadMe)
 
-        writeToFile('README.md', markdownContent);
+        writeToFile('newREADME.md', markdownContent);
     })
     .catch((error) => {
         console.error(error);

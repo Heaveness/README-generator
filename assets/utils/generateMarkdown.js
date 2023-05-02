@@ -31,7 +31,7 @@ This project is licensed under the ${license} license.`;
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `  # ${data.title}
   ${renderLicenseBadge(data.license)}
 
   ## Description
@@ -40,7 +40,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
+  - ${renderLicenseLink(data.license)}
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions? Contact me!](#questions)
@@ -51,7 +51,6 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ## License
   ${renderLicenseSection(data.license)}
   
   ## Contributing
