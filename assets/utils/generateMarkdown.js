@@ -1,5 +1,5 @@
-// Function to return a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function to return a license badge based on which license is passed in.
+// If there is no license, return an empty string.
 function renderLicenseBadge(license) {
   if (license) {
     return `![License](https://img.shields.io/badge/license-${license}-brightgreen.svg)`;
@@ -8,8 +8,8 @@ function renderLicenseBadge(license) {
   }
 }
 
-// Function to return the license link
-// If there is no license, return an empty string
+// Function to return the license link.
+// If there is no license, return an empty string.
 function renderLicenseLink(license) {
   if (license) {
     return `[License](#license)`;
@@ -18,8 +18,8 @@ function renderLicenseLink(license) {
   }
 }
 
-// Function to return the license section of README
-// If there is no license, return an empty string
+// Function to return the license section of README.
+// If there is no license, return an empty string.
 function renderLicenseSection(license) {
   if (license) {
     return `## License
@@ -29,7 +29,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate the README content from index.js's user inputted data. New content is placed within the readme file called "newREADME.md"
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -66,4 +66,5 @@ function generateMarkdown(data) {
 `;
 }
 
+// Exports the generateMarkdown function as a module to be used by other files.
 module.exports = generateMarkdown;

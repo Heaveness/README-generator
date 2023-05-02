@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Global variable to store the package requirements for later use.
 const inquirer = require("inquirer");
 
 const fs = require("fs");
@@ -7,12 +7,14 @@ const generateMarkdown = require("./assets/utils/generateMarkdown.js");
 
 const path = require('path');
 
-// TODO: Create an array of questions for user input
+// Array of questions for terminal to prompt.
 const questions = [
     {
+		// Title question.
         type: "input",
         name: "title",
         message: "What is the title of your project?",
+        // To prevent empty user input.
         validate: function (input) {
             if (input.trim() === '') {
               return 'Please enter a title for your project!';
@@ -21,6 +23,7 @@ const questions = [
         },
     },
     {
+		// Github username question.
         type: "input",
         name: "github",
         message: "What is your Github username?",
@@ -32,6 +35,7 @@ const questions = [
         }
     },
     {
+		// Email address question.
         type: "input",
         name: "email",
         message: "What is your email address?",
@@ -43,6 +47,7 @@ const questions = [
         }
     },
     {
+		// Description question.
         type: "input",
         name: "description",
         message: "Please provide a brief description of your project:",
@@ -54,6 +59,7 @@ const questions = [
         }
     },
     {
+		// Installation instruction question.
         type: "input",
         name: "installation",
         message: "Please provide an installation instruction:",
@@ -65,6 +71,7 @@ const questions = [
         }
     },
     {
+		// Main usage question.
         type: "input",
         name: "usage",
         message: "What is the main usage of your project?",
@@ -76,12 +83,14 @@ const questions = [
         }
     },
     {
+		// License choices.
         type: "list",
         name: "license",
         message: 'Please choose a license for your project:',
         choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'None'],
     },
     {
+		// Contribution guideline question.
         type: "input",
         name: "contribute",
         message: "Please provide contribution guidelines for your project:",
@@ -93,6 +102,7 @@ const questions = [
         }
     },
     {
+		// Testing instruction question.
         type: "input",
         name: "tests",
         message: "Please provide any test instructions for your project:",
@@ -105,10 +115,11 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to take data from init() function into README file at a specific file path.
 function writeToFile(fileName, data) {
     const filePath = path.join(__dirname, '..', 'README-generator', 'assets', 'utils', fileName);
 
+	// To catch any potential errors with the file path.
     fs.writeFile(filePath, data, (err) => {
       if (err) {
         console.error(err);
@@ -118,7 +129,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+// Function to prompt the user with questions array then pass that data to function above.
 function init() {
     inquirer.prompt(questions)
     .then((inquirerReadMe) => {
@@ -133,5 +144,5 @@ function init() {
     })
 }
 
-// Function call to initialize app
+// Function call to initialize app.
 init();
