@@ -45,7 +45,7 @@ function generateMarkdown(data) {
   - ${renderLicenseLink(data.license)}
   - [Contributing](#contribution)
   - [Tests](#tests)
-  - [Questions? Contact me!](#questions)
+  - [Questions](#questions)
   
   ## Installation
   ${data.installation}
@@ -61,7 +61,7 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   
-  ## Questions? Contact me!
+  ## Questions
   If you have any questions regarding the repo, please contact me at ${data.email}. Or check with me through my Github profile: ${data.github}.
 `;
 }

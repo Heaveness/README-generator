@@ -12,7 +12,7 @@
   - [License](#license)
   - [Contributing](#contribution)
   - [Tests](#tests)
-  - [Questions? Contact me!](#questions)
+  - [Questions](#questions)
   
   ## Installation
   Step 1) Git clone repo. Step 2) use node index.js. to initiate.
@@ -29,5 +29,5 @@
   ## Tests
   I'm not sure, test it out! It's just a sample project!
   
-  ## Questions? Contact me!
+  ## Questions
   If you have any questions regarding the repo, please contact me at Testemail@email.com. Or check with me through my Github profile: Heaveness.
