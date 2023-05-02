@@ -15,8 +15,11 @@ Come on and give it a try today! What are you waiting for? <br>
 
 ## Previews
 **Terminal:** <br>
-![Terminal Preview Image 1]() <br>
-![Terminal Preview Image 2]() <br>
+![Terminal Preview Image 1](assets/images/Terminal-Preview-1.png) <br>
+<br>
+
+**Results:**
+![Terminal Preview Image 2](assets/images/Terminal-Preview-2.png) <br>
 
 ## Credits
 
