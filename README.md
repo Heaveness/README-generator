@@ -10,7 +10,7 @@ After you are done with your questions, it will generate the read me in a easy-t
 Come on and give it a try today! What are you waiting for? <br>
 
 ## Links
-**Walkthrough:** [Link to the walkthrough video! Coming Soon!]() <br>
+**Walkthrough:** [Link to the walkthrough video!](https://drive.google.com/file/d/1MvJ8kVKQY0GM9gqWJYKKH8jaoDkvYGYU/view) <br>
 **Github Repo:** [Link to Github repository!](https://github.com/Heaveness/README-generator) <br>
 
 ## Previews
