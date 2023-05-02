@@ -12,32 +12,68 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the title of your project?"
+        message: "What is the title of your project?",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter a title for your project!';
+            }
+            return true;
+        },
     },
     {
         type: "input",
         name: "github",
-        message: "What is your Github username?"
+        message: "What is your Github username?",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter a Github username for your project!';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         name: "email",
-        message: "What is your email address?"
+        message: "What is your email address?",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter an email address for your project!';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         name: "description",
-        message: "Please provide a brief description of your project:"
+        message: "Please provide a brief description of your project:",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter a description of your project!';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         name: "installation",
-        message: "Please provide an installation instruction:"
+        message: "Please provide an installation instruction:",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please provide an installation instruction for your project!';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         name: "usage",
-        message: "What is the main usage of your project?"
+        message: "What is the main usage of your project?",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter the main usage for your project!';
+            }
+            return true;
+        }
     },
     {
         type: "list",
@@ -48,12 +84,24 @@ const questions = [
     {
         type: "input",
         name: "contribute",
-        message: "Please provide contribution guidelines for your project:"
+        message: "Please provide contribution guidelines for your project:",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please provide the contribution guidelines for your project!';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         name: "tests",
-        message: "Please provide any test instructions for your project:"
+        message: "Please provide any test instructions for your project:",
+        validate: function (input) {
+            if (input.trim() === '') {
+              return 'Please enter any test instructions for your project!';
+            }
+            return true;
+        }
     }
 ];
 
